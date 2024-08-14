@@ -1,0 +1,17 @@
+{
+  /*
+   | This file is automatically updated by ModManifestBuilder
+   | when the project is compiled.
+   | 
+   | Changes made to this file may be overwritten.
+   | 
+   */
+  "$schema": "https://smapi.io/schemas/manifest.json",
+  "UniqueID": "Linkoid.Stardew.ValleyUnit.Tests",
+  "Name": "StardewUnit.Tests",
+  "Author": "linkoid",
+  "Version": "1.0.0-Debug",
+  "Description": "Tests the StardewUnit library",
+  "MinimumApiVersion": "4.0.6",
+  "EntryDll": "Linkoid.Stardew.ValleyUnit.Tests.dll"
+}

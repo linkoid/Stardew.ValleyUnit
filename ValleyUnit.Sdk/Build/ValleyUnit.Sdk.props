@@ -1,0 +1,16 @@
+﻿<Project>
+  <PropertyGroup>
+    <TestProject>true</TestProject>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <Description>A mod that uses ValleyUnit to test another mod</Description>
+    <MinimumApiVersion>4.0.0</MinimumApiVersion>
+    <BundleExtraAssemblies>ThirdParty</BundleExtraAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectCapability Include="TestContainer" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,6 @@
+﻿<Project>
+  <PropertyGroup>
+    <UniqueId Condition="'$(UniqueId)' == ''">$(PackageId)</UniqueId>
+    <UniqueId Condition="'$(UniqueId)' == ''">$(AssemblyName)</UniqueId>
+  </PropertyGroup>
+</Project>

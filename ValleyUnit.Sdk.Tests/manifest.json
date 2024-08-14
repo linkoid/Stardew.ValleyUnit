@@ -1,0 +1,16 @@
+{
+  /*
+   | This file is automatically updated by ModManifestBuilder
+   | when the project is compiled.
+   | 
+   | Changes made to this file may be overwritten.
+   | 
+   */
+  "$schema": "https://smapi.io/schemas/manifest.json",
+  "UniqueID": "ValleyUnit.Sdk.Tests",
+  "Name": "ValleyUnit.Sdk.Tests",
+  "Version": "1.0.0-Debug",
+  "Description": "A mod that uses ValleyUnit to test another mod",
+  "MinimumApiVersion": "4.0.0",
+  "EntryDll": "ValleyUnit.Sdk.Tests.dll"
+}

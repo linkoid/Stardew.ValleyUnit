@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.Build.NoTargets/3.7.56">
+
+  <PropertyGroup>
+    <PackageId>Linkoid.Stardew.ValleyUnit.Sdk</PackageId>
+    <VersionPrefix>0.1.0</VersionPrefix>
+    <VersionSuffix>alpha</VersionSuffix>
+    <TargetFramework>net6.0</TargetFramework>
+    <IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <NoTargetsDoNotReferenceOutputAssemblies>false</NoTargetsDoNotReferenceOutputAssemblies>
+    <ContentTargetFolders>contentFiles</ContentTargetFolders>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <EnableModDeploy>false</EnableModDeploy>
+    <EnableModZip>false</EnableModZip>
+    <EnableHarmony>true</EnableHarmony>
+    <EnableGameDebugging>false</EnableGameDebugging>
+    <BundleExtraAssemblies></BundleExtraAssemblies>
+    <UniqueId>$(AssemblyName)</UniqueId>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TestProject>false</TestProject>
+    <IsTestProject>false</IsTestProject>
+    <GenerateProgramFile>false</GenerateProgramFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectCapability Remove="TestContainer" />
+    <Content Remove="@(Content->WithMetadataValue('Filename', 'testhost'))" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Linkoid.Stardew.ModBuildConfig" Version="5.0.0-rc.0" IncludeAssets="all" PrivateAssets="none" />
+    <PackageReference Include="Leclair.Stardew.ModManifestBuilder" Version="2.3.1" IncludeAssets="build;buildTransitive" PrivateAssets="none" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.10.0" IncludeAssets="all" ExcludeAssets="compile" PrivateAssets="none" />
+    <PackageReference Include="Linkoid.Build.NuGetPushLocal" Version="1.0.0" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ValleyUnit\ValleyUnit.csproj" IncludeAssets="all" PrivateAssets="none" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="*.cs" Pack="true" />
+    <None Update="Build\**" Pack="true" PackagePath="build\" />
+    <None Update="Build\$(MSBuildProjectName).props;Build\$(MSBuildProjectName).targets">
+      <PackagePath>build\$(PackageId)%(Extension)</PackagePath>
+    </None>
+  </ItemGroup>
+
+
+</Project>

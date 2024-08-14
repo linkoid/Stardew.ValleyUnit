@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup>
+    <AssemblyName>Linkoid.Stardew.ValleyUnit</AssemblyName>
+    <VersionPrefix>0.1.0</VersionPrefix>
+    <VersionSuffix>alpha</VersionSuffix>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>11</LangVersion>
+    <NoWarn>$(NoWarn);MSB3277</NoWarn>
+    <EnableModDeploy>false</EnableModDeploy>
+    <EnableModZip>false</EnableModZip>
+    <EnableHarmony>true</EnableHarmony>
+    <EnableGameDebugging>false</EnableGameDebugging>
+    <BundleExtraAssemblies></BundleExtraAssemblies>
+    <!--<UniqueId>$(AssemblyName)</UniqueId>-->
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Linkoid.SmiteUnit" Version="0.3.0-alpha" />
+    <PackageReference Include="Linkoid.SmiteUnit.Injection" Version="0.3.0-alpha" />
+    <PackageReference Include="RandomSkunk.RuntimePolyfill" Version="1.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Linkoid.Build.NuGetPushLocal" Version="1.0.0" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Stardew.Tasks\Stardew.Tasks\Stardew.Tasks.csproj" />
+  </ItemGroup>
+
+  <Import Project="GameReferences.props" Sdk="Linkoid.Stardew.ModBuildConfig" Version="5.0.0-rc.0" />
+
+</Project>
