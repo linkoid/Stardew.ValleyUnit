@@ -4,16 +4,28 @@
     <AssemblyName>Linkoid.Stardew.ValleyUnit</AssemblyName>
     <VersionPrefix>0.1.0</VersionPrefix>
     <VersionSuffix>alpha</VersionSuffix>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>linkoid</Authors>
+    <RepositoryUrl>https://github.com/linkoid/Stardew.ValleyUnit</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <LangVersion>11</LangVersion>
     <NoWarn>$(NoWarn);MSB3277</NoWarn>
-    <EnableModDeploy>false</EnableModDeploy>
-    <EnableModZip>false</EnableModZip>
     <EnableHarmony>true</EnableHarmony>
-    <EnableGameDebugging>false</EnableGameDebugging>
-    <BundleExtraAssemblies></BundleExtraAssemblies>
-    <!--<UniqueId>$(AssemblyName)</UniqueId>-->
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>None</DebugType>
   </PropertyGroup>
   
   <ItemGroup>

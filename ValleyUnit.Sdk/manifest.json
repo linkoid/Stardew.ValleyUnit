@@ -9,7 +9,8 @@
   "$schema": "https://smapi.io/schemas/manifest.json",
   "UniqueID": "ValleyUnit.Sdk",
   "Name": "ValleyUnit.Sdk",
-  "Version": "0.1.0-alpha.Debug",
+  "Author": "linkoid",
+  "Version": "0.1.0-alpha",
   "EntryDll": "ValleyUnit.Sdk.dll",
   "Dependencies": [
     {

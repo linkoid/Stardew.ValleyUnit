@@ -4,20 +4,32 @@
     <PackageId>Linkoid.Stardew.ValleyUnit.Sdk</PackageId>
     <VersionPrefix>0.1.0</VersionPrefix>
     <VersionSuffix>alpha</VersionSuffix>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>linkoid</Authors>
+    <RepositoryUrl>https://github.com/linkoid/Stardew.ValleyUnit</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <ContentTargetFolders>contentFiles</ContentTargetFolders>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <IsPackable>true</IsPackable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <NoTargetsDoNotReferenceOutputAssemblies>false</NoTargetsDoNotReferenceOutputAssemblies>
-    <ContentTargetFolders>contentFiles</ContentTargetFolders>
   </PropertyGroup>
 
   <PropertyGroup>
+    <UniqueId>$(AssemblyName)</UniqueId>
     <EnableModDeploy>false</EnableModDeploy>
     <EnableModZip>false</EnableModZip>
     <EnableHarmony>true</EnableHarmony>
     <EnableGameDebugging>false</EnableGameDebugging>
     <BundleExtraAssemblies></BundleExtraAssemblies>
-    <UniqueId>$(AssemblyName)</UniqueId>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -48,6 +60,5 @@
       <PackagePath>build\$(PackageId)%(Extension)</PackagePath>
     </None>
   </ItemGroup>
-
 
 </Project>
